@@ -1,160 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>6-Month Weekly Roadmap — Coding Blocks + Narasimha + LeetCode</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Blocks 6-Month Roadmap</title>
 <style>
-  :root{--bg:#f7f9fb;--card:#fff;--muted:#7f8c8d;--blue:#2980b9;--green:#27ae60;--orange:#e67e22;--purple:#8e44ad}
-  body{font-family:Inter,Segoe UI,Arial; background:var(--bg); margin:0; padding:24px; color:#222}
-  h1{color:var(--blue); margin-bottom:6px}
-  p.lead{color:var(--muted); margin-top:0}
-  .month{background:var(--card); border-radius:10px; padding:14px; margin-bottom:18px; box-shadow:0 6px 18px rgba(30,40,50,0.06)}
-  .month h2{margin:0 0 10px}
-  table{width:100%; border-collapse:collapse; margin-bottom:6px}
-  th,td{padding:10px; border:1px solid #e1e6ea; text-align:left; font-size:13px}
-  th{background:#ecf5fb; color:#0b3b5a}
-  tr:nth-child(even) td{background:#fbfdff}
-  .theory{background:linear-gradient(90deg, rgba(210,235,255,0.35), rgba(255,255,255,0.0));}
-  .practice{background:linear-gradient(90deg, rgba(220,255,230,0.35), rgba(255,255,255,0.0));}
-  .interview{background:linear-gradient(90deg, rgba(255,245,230,0.35), rgba(255,255,255,0.0));}
-  .project{background:linear-gradient(90deg, rgba(235,225,255,0.35), rgba(255,255,255,0.0));}
-  .tag{display:inline-block; padding:4px 8px; border-radius:6px; font-size:12px; color:#fff}
-  .tag-blue{background:var(--blue)} .tag-green{background:var(--green)} .tag-orange{background:var(--orange)} .tag-purple{background:var(--purple)}
-  input[type=checkbox]{width:18px; height:18px}
-  .topbar{display:flex; gap:12px; align-items:center; margin-bottom:16px}
-  .btn{padding:8px 12px; border-radius:8px; background:var(--blue); color:#fff; border:none; cursor:pointer}
-  footer{margin-top:18px; color:var(--muted); font-size:13px}
-  @media (max-width:900px){th,td{font-size:12px; padding:8px}}
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.5;
+  }
+  h1, h2 {
+    color: #2c3e50;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+  th, td {
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #2980b9;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #ecf0f1;
+  }
+  input[type="checkbox"] {
+    transform: scale(1.3);
+  }
 </style>
 </head>
 <body>
-<h1>6-Month Weekly Roadmap — Coding Blocks + Narasimha + LeetCode</h1>
-<p class="lead">Weekly plan (24 weeks). Daily target: <strong>4 hours/day</strong>. Use this tracker to tick off weeks as you finish them. Sections map Coding Blocks videos → Narasimha chapters → LeetCode targets. Months 5–6 include Projects & System Design.</p>
-<div class="topbar">
-  <button class="btn" onclick="saveState()">Save Progress</button>
-  <button class="btn" style="background:var(--green)" onclick="loadState()">Load Progress</button>
-  <button class="btn" style="background:var(--orange)" onclick="resetState()">Reset</button>
-  <div style="margin-left:auto;color:var(--muted)">Local persistence uses <code>localStorage</code></div>
-</div>
 
-<!-- MONTH 1 -->
-<div class="month" id="month-1">
-  <h2>Month 1 — Foundations: Basics, Arrays, Strings</h2>
-  <table>
-    <thead>
-      <tr><th>Week</th><th>Topics (Coding Blocks)</th><th>Narasimha Chapters</th><th>Focus</th><th>CB Practice</th><th>LeetCode Target</th><th>Done</th></tr>
-    </thead>
-    <tbody>
-      <tr class="theory"><td>Week 1</td><td>Intro, Variables, Data Types, NS & DT, Fundamentals & Patterns</td><td>Ch 1 — Complexity & Analysis</td><td>Java basics, I/O, loops</td><td>Fundamentals challenges 1–10</td><td>10 easy — arrays/hash</td><td><input type="checkbox" id="w1"></td></tr>
-      <tr class="practice"><td>Week 2</td><td>Functions, Methods, 1D Arrays</td><td>Ch 2 (arrays overview) + Ch1 review</td><td>Functions, modular coding, array traversal</td><td>CB array problems 11–20</td><td>10 easy — arrays/2-pointer</td><td><input type="checkbox" id="w2"></td></tr>
-      <tr class="practice"><td>Week 3</td><td>2D Arrays, ArrayList</td><td>Ch 2 — Arrays problems</td><td>Matrix ops, dynamic arrays</td><td>CB matrix challenges 21–32</td><td>8 matrix + 2 array</td><td><input type="checkbox" id="w3"></td></tr>
-      <tr class="practice"><td>Week 4</td><td>String & StringBuilder</td><td>Ch 15 — String Algorithms (intro)</td><td>String ops, substrings, builders</td><td>CB string challenges</td><td>10 string problems</td><td><input type="checkbox" id="w4"></td></tr>
-    </tbody>
-  </table>
-</div>
+<h1>Coding Blocks + Narasimha Karumanchi 6-Month Roadmap</h1>
 
-<!-- MONTH 2 -->
-<div class="month" id="month-2">
-  <h2>Month 2 — Recursion, Backtracking, OOP, Stacks/Queues</h2>
-  <table>
-    <thead>
-      <tr><th>Week</th><th>Topics</th><th>Narasimha Chapters</th><th>Focus</th><th>CB Practice</th><th>LeetCode Target</th><th>Done</th></tr>
-    </thead>
-    <tbody>
-      <tr class="theory"><td>Week 5</td><td>Recursion basics & visualization</td><td>Ch 2 — Recursion</td><td>Recursion vs iteration, call stack</td><td>Recursion problems 1–10</td><td>10 recursion/easy- medium</td><td><input type="checkbox" id="w5"></td></tr>
-      <tr class="practice"><td>Week 6</td><td>Recursion Get/Print + Intro Backtracking</td><td>Ch 2 — Backtracking</td><td>Subsets, permutations, N-Queens</td><td>Backtracking challenges</td><td>8 backtracking + 2 recursion</td><td><input type="checkbox" id="w6"></td></tr>
-      <tr class="theory"><td>Week 7</td><td>OOP basics (classes, objects, inheritance)</td><td>Ch 1 (ADTs) + Java OOP notes</td><td>Design classes, constructors, encapsulation</td><td>Small OOP programs</td><td>—</td><td><input type="checkbox" id="w7"></td></tr>
-      <tr class="practice"><td>Week 8</td><td>Stacks & Queues (impl. array/linked list)</td><td>Ch 4 (Stacks), Ch 5 (Queues)</td><td>Applications, eval expressions, LRU idea</td><td>Stack/Queue problems</td><td>10 stack/queue problems</td><td><input type="checkbox" id="w8"></td></tr>
-    </tbody>
-  </table>
-</div>
+<!-- Month 1 -->
+<h2>Month 1: Basics + Arrays + Strings</h2>
+<table>
+  <tr>
+    <th>Week</th>
+    <th>Topics (Coding Blocks)</th>
+    <th>Narasimha Chapters</th>
+    <th>Focus</th>
+    <th>Practice</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Introduction, Variables, Data Types, NS & DT, Fundamentals & Patterns</td>
+    <td>Ch 1: Introduction</td>
+    <td>Java syntax, basic I/O, loops, conditions</td>
+    <td>CB challenges 1–10</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Functions & 1D Arrays</td>
+    <td>Ch 1 + Arrays problems</td>
+    <td>Functions, parameters, array traversal, summation</td>
+    <td>CB challenges 11–20</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2D Arrays & ArrayList</td>
+    <td>Ch 1 + Arrays</td>
+    <td>Matrix manipulation, dynamic arrays</td>
+    <td>CB challenges 21–32</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>String & StringBuilder</td>
+    <td>Ch 15: String Algorithms</td>
+    <td>String methods, manipulation, concatenation</td>
+    <td>CB string challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+</table>
 
-<!-- MONTH 3 -->
-<div class="month" id="month-3">
-  <h2>Month 3 — Linked Lists & Trees (Basics)</h2>
-  <table>
-    <thead>
-      <tr><th>Week</th><th>Topics</th><th>Narasimha Chapters</th><th>Focus</th><th>CB Practice</th><th>LeetCode Target</th><th>Done</th></tr>
-    </thead>
-    <tbody>
-      <tr class="practice"><td>Week 9</td><td>Singly Linked List: insert, delete, traverse</td><td>Ch 3 — Linked Lists</td><td>Pointers, references, common ops</td><td>LL problems 1–6</td><td>10 LL problems (easy-medium)</td><td><input type="checkbox" id="w9"></td></tr>
-      <tr class="practice"><td>Week 10</td><td>Advanced LL: reverse, detect cycle, merge</td><td>Ch 3</td><td>Two-pointer, Floyd detection, merges</td><td>LL problems 7–14</td><td>10 LL medium</td><td><input type="checkbox" id="w10"></td></tr>
-      <tr class="theory"><td>Week 11</td><td>Binary Tree basics + traversals (pre,in,post)</td><td>Ch 6 — Binary Trees</td><td>Recursive & iterative traversals</td><td>Tree traversal challenges</td><td>8 tree problems</td><td><input type="checkbox" id="w11"></td></tr>
-      <tr class="practice"><td>Week 12</td><td>BST operations, AVL intro</td><td>Ch 6 — BST & Balanced Trees</td><td>Insert/delete, balancing ideas</td><td>BST problems</td><td>8 BST problems</td><td><input type="checkbox" id="w12"></td></tr>
-    </tbody>
-  </table>
-</div>
+<!-- Month 2 -->
+<h2>Month 2: Recursion + OOPS + Stacks & Queues</h2>
+<table>
+  <tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Narasimha Chapters</th>
+    <th>Focus</th>
+    <th>Practice</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Recursion Basics</td>
+    <td>Ch 2</td>
+    <td>Recursive calls, stack visualization</td>
+    <td>CB recursion challenges 1–10</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Recursion Get & Print + Backtracking</td>
+    <td>Ch 2</td>
+    <td>Return values, printing patterns, N-Queens, Sudoku</td>
+    <td>CB backtracking challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>OOPS Basics</td>
+    <td>Ch 1 (ADTs)</td>
+    <td>Classes, objects, encapsulation, inheritance</td>
+    <td>Small OOPS programs</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Stacks & Queues</td>
+    <td>Ch 4, 5</td>
+    <td>ADTs, implementation using arrays & linked lists</td>
+    <td>CB stack & queue challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+</table>
 
-<!-- MONTH 4 -->
-<div class="month" id="month-4">
-  <h2>Month 4 — Heaps, Graphs & Hashing</h2>
-  <table>
-    <thead>
-      <tr><th>Week</th><th>Topics</th><th>Narasimha Chapters</th><th>Focus</th><th>CB Practice</th><th>LeetCode Target</th><th>Done</th></tr>
-    </thead>
-    <tbody>
-      <tr class="practice"><td>Week 13</td><td>Heaps & Priority Queues (binary heap)</td><td>Ch 7 — Heaps</td><td>Heapify, push/pop, k-largest</td><td>Heap problems</td><td>8 heap/priority problems</td><td><input type="checkbox" id="w13"></td></tr>
-      <tr class="practice"><td>Week 14</td><td>Graphs: representations, BFS, DFS</td><td>Ch 9 — Graphs</td><td>Adj list/matrix, traversal</td><td>Graph traversal problems</td><td>10 BFS/DFS problems</td><td><input type="checkbox" id="w14"></td></tr>
-      <tr class="theory"><td>Week 15</td><td>Graphs: shortest path & MST (Dijkstra, Kruskal)</td><td>Ch 9</td><td>Weighted graphs, priority queue use</td><td>SP & MST problems</td><td>8 graph medium</td><td><input type="checkbox" id="w15"></td></tr>
-      <tr class="practice"><td>Week 16</td><td>HashMap & Hashing techniques</td><td>Ch 14 — Hashing</td><td>Collision handling, load factor</td><td>Hashing problems + freq maps</td><td>10 hashing problems</td><td><input type="checkbox" id="w16"></td></tr>
-    </tbody>
-  </table>
-</div>
+<!-- Month 3 -->
+<h2>Month 3: Linked Lists + Trees (Basics)</h2>
+<table>
+  <tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Narasimha Chapters</th>
+    <th>Focus</th>
+    <th>Practice</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Linked List Basics</td>
+    <td>Ch 3</td>
+    <td>Singly & doubly linked list, circular</td>
+    <td>CB linked list challenges 1–10</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Advanced Linked Lists</td>
+    <td>Ch 3</td>
+    <td>Skip list, memory-efficient lists</td>
+    <td>CB linked list challenges 11–14</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Trees: Binary Trees</td>
+    <td>Ch 6</td>
+    <td>Tree traversal, properties</td>
+    <td>CB trees challenges 1–8</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Trees: BST & AVL</td>
+    <td>Ch 6</td>
+    <td>Insertion, deletion, balancing</td>
+    <td>CB trees challenges 9–16</td>
+    <td><input type="checkbox"></td>
+  </tr>
+</table>
 
-<!-- MONTH 5 -->
-<div class="month" id="month-5">
-  <h2>Month 5 — Dynamic Programming + Advanced Topics + Projects start</h2>
-  <table>
-    <thead>
-      <tr><th>Week</th><th>Topics</th><th>Narasimha Chapters</th><th>Focus</th><th>CB Practice</th><th>LeetCode Target</th><th>Done</th></tr>
-    </thead>
-    <tbody>
-      <tr class="theory"><td>Week 17</td><td>DP basics: memoization & tabulation (Fibonacci, Knapsack intro)</td><td>Ch 19 — DP</td><td>State design, base cases</td><td>DP easy problems</td><td>8 DP easy-medium</td><td><input type="checkbox" id="w17"></td></tr>
-      <tr class="practice"><td>Week 18</td><td>DP advanced: LCS, LIS, knapsack variations</td><td>Ch 19</td><td>Optimization thinking & transitions</td><td>DP medium problems</td><td>10 DP medium</td><td><input type="checkbox" id="w18"></td></tr>
-      <tr class="practice"><td>Week 19</td><td>Bitmasking & advanced DP patterns</td><td>Ch 22 (bitmask) + Ch19</td><td>Subset DP, mask-state</td><td>Bitmask/DP problems</td><td>8 bitmask/DP</td><td><input type="checkbox" id="w19"></td></tr>
-      <tr class="project"><td>Week 20</td><td>Project kickoff — choose & scaffold project (Java backend + frontend)</td><td>Refer: Java collections, OOP chapters</td><td>Project design, API contracts, DB schema</td><td>Start building (MVP)</td><td>—</td><td><input type="checkbox" id="w20"></td></tr>
-    </tbody>
-  </table>
-  <p style="margin:6px 0 0;color:var(--muted)"><strong>Project ideas:</strong> Job Recommendation System, Library Management Web App, Real-time Division Engine simulation with visualization. Aim to have MVP by end of Month 5.</p>
-</div>
+<!-- Month 4 -->
+<h2>Month 4: Heap + Graphs + Hashing</h2>
+<table>
+  <tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Narasimha Chapters</th>
+    <th>Focus</th>
+    <th>Practice</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Heap + Priority Queue</td>
+    <td>Ch 7</td>
+    <td>Min/Max heap, priority queue applications</td>
+    <td>CB heap challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>Graphs: Basics</td>
+    <td>Ch 9</td>
+    <td>Graph representation, DFS, BFS</td>
+    <td>CB graph challenges 1–8</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>Graphs: Advanced</td>
+    <td>Ch 9</td>
+    <td>Shortest path, MST, topological sort</td>
+    <td>CB graph challenges 9–16</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>HashMap & Hashing</td>
+    <td>Ch 14</td>
+    <td>Hash tables, collisions, chaining, open addressing</td>
+    <td>CB hashing challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+</table>
 
-<!-- MONTH 6 -->
-<div class="month" id="month-6">
-  <h2>Month 6 — Final Polishing: Projects, System Design & Mock Interviews</h2>
-  <table>
-    <thead>
-      <tr><th>Week</th><th>Topics</th><th>Narasimha Chapters / Reference</th><th>Focus</th><th>Tasks</th><th>Interview Targets</th><th>Done</th></tr>
-    </thead>
-    <tbody>
-      <tr class="project"><td>Week 21</td><td>Project — complete core features, testing</td><td>Chapters as needed</td><td>End-to-end flows, unit tests</td><td>Finish MVP, add tests</td><td>—</td><td><input type="checkbox" id="w21"></td></tr>
-      <tr class="project"><td>Week 22</td><td>Deployment & infra: Docker, hosting (Heroku/Render), CI basics</td><td>External resources (Docker, GitHub Actions)</td><td>Containerize, deploy backend & frontend</td><td>Deploy project; add README</td><td>—</td><td><input type="checkbox" id="w22"></td></tr>
-      <tr class="interview"><td>Week 23</td><td>Mock interviews: coding (timed) + system design primer</td><td>Review all DSA chapters</td><td>Timed 45–60 min mocks, design discussions</td><td>4 timed mocks + 2 system design topics</td><td>Top 50 interview questions</td><td><input type="checkbox" id="w23"></td></tr>
-      <tr class="interview"><td>Week 24</td><td>Final revision & behavioral prep (STAR method)</td><td>All</td><td>Behavioral answers, finalize portfolio</td><td>Record mock HR + finalize resume/LinkedIn</td><td>Blind 75 revision</td><td><input type="checkbox" id="w24"></td></tr>
-    </tbody>
-  </table>
-</div>
+<!-- Month 5 -->
+<h2>Month 5: DP + Greedy + Divide & Conquer</h2>
+<table>
+  <tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Narasimha Chapters</th>
+    <th>Focus</th>
+    <th>Practice</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>DP Basics</td>
+    <td>Ch 19</td>
+    <td>LCS, Fibonacci, subset sum</td>
+    <td>CB DP challenges 1–8</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>DP Advanced</td>
+    <td>Ch 19</td>
+    <td>Matrix chain, knapsack, DP on strings</td>
+    <td>CB DP challenges 9–23</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>Greedy Algorithms</td>
+    <td>Ch 17</td>
+    <td>Activity selection, fractional knapsack</td>
+    <td>CB greedy challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>Divide & Conquer</td>
+    <td>Ch 18</td>
+    <td>Merge sort, quicksort, binary search variations</td>
+    <td>CB divide & conquer challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+</table>
 
-<footer>Tip: Click <strong>Save Progress</strong> to persist checkboxes locally. You can edit topics directly in the HTML if you want to customize week-level tasks.</footer>
+<!-- Month 6 -->
+<h2>Month 6: Advanced Topics + Revision</h2>
+<table>
+  <tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Narasimha Chapters</th>
+    <th>Focus</th>
+    <th>Practice</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>Text Processing & String Algorithms</td>
+    <td>Ch 15</td>
+    <td>KMP, Tries, Suffix trees</td>
+    <td>CB text processing challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>Segment Tree & Bitmasking</td>
+    <td>CB Section 20, 22</td>
+    <td>Range queries, bitmask DP</td>
+    <td>CB challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>Misc Topics: Game, AVL, Adapters, Collections</td>
+    <td>Ch 6 + CB Sections</td>
+    <td>Collections, Java utilities</td>
+    <td>CB challenges</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>Revision & Mock Interview Prep</td>
+    <td>All chapters</td>
+    <td>Revise weak areas, practice interview questions</td>
+    <td>Solve top 50 CB + Narasimha problems</td>
+    <td><input type="checkbox"></td>
+  </tr>
+</table>
 
 <script>
-const ids = Array.from({length:24},(_,i)=>'w'+(i+1));
-function saveState(){
-  const state = {};
-  ids.forEach(id=>{const el=document.getElementById(id); if(el) state[id]=el.checked});
-  localStorage.setItem('roadmap_progress', JSON.stringify(state));
-  alert('Progress saved locally');
-}
-function loadState(){
-  const raw = localStorage.getItem('roadmap_progress');
-  if(!raw){ alert('No saved progress found'); return }
-  const state = JSON.parse(raw);
-  ids.forEach(id=>{const el=document.getElementById(id); if(el && state[id]!==undefined) el.checked = state[id]});
-  alert('Progress loaded');
-}
-function resetState(){ if(confirm('Reset all progress?')){ ids.forEach(id=>{const el=document.getElementById(id); if(el) el.checked=false}); localStorage.removeItem('roadmap_progress'); }}
-// auto-load if present
-window.addEventListener('load',()=>{ if(localStorage.getItem('roadmap_progress')) loadState(); });
+// Save & load checkbox state using localStorage
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkboxes.forEach((cb, index) => {
+  const saved = localStorage.getItem('week_' + index);
+  if (saved === 'true') cb.checked = true;
+
+  cb.addEventListener('change', () => {
+    localStorage.setItem('week_' + index, cb.checked);
+  });
+});
 </script>
+
 </body>
 </html>
