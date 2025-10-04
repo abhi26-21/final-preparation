@@ -3,563 +3,732 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DSA + Full Stack 10-Month Roadmap</title>
+<title>SDE 10-Month Roadmap: DSA + Java Backend</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-  body {
-    font-family: 'Inter', Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6;
-    color: #212529;
-    background-color: #f4f7f9;
-  }
+    body {
+        font-family: 'Inter', Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+        color: #e0e0e0; /* Light gray text for dark theme */
+        background-color: #121212; /* Dark background */
+    }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-  h1, h2, h3 {
-    color: #0056b3;
-    padding-bottom: 5px;
-  }
+    h1, h2, h3 {
+        color: #64b5f6; /* Lighter blue for headings */
+        padding-bottom: 5px;
+    }
 
-  h1 {
-    font-size: 2.5em;
-    color: #17436b;
-    border-bottom: 3px solid #0056b3;
-    padding-bottom: 10px;
-    margin-top: 0;
-  }
+    h1 {
+        font-size: 2.5em;
+        color: #e0e0e0;
+        border-bottom: 3px solid #64b5f6; /* Blue border */
+        padding-bottom: 10px;
+        margin-top: 0;
+    }
 
-  h2 {
-    font-size: 1.8em;
-    margin-top: 40px;
-    border-bottom: 1px solid #dee2e6;
-  }
+    h2 {
+        font-size: 1.8em;
+        margin-top: 40px;
+        border-bottom: 1px solid #333; /* Darker border */
+    }
 
-  .table-wrapper {
-    overflow-x: auto;
-    margin-bottom: 40px;
-  }
+    .table-wrapper {
+        overflow-x: auto;
+        margin-bottom: 40px;
+    }
 
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: white;
-  }
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Darker shadow */
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #1e1e1e; /* Slightly lighter dark background for table */
+    }
 
-  th, td {
-    border: 1px solid #e9ecef;
-    padding: 14px 18px;
-    text-align: left;
-    transition: background-color 0.3s ease;
-  }
+    th, td {
+        border: 1px solid #333; /* Dark border */
+        padding: 14px 18px;
+        text-align: left;
+        transition: background-color 0.3s ease;
+    }
 
-  th {
-    background-color: #0056b3;
-    color: white;
-    font-weight: 700;
-    border: none;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-  }
+    th {
+        background-color: #1f2a3a; /* Dark blue heading */
+        color: white;
+        font-weight: 700;
+        border: none;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
 
-  tr:nth-child(even) {
-    background-color: #f8f9fa;
-  }
+    tr:nth-child(even) {
+        background-color: #242424; /* Subtle row differentiation */
+    }
 
-  tr:hover {
-    background-color: #e2f0ff;
-  }
+    tr:hover {
+        background-color: #2c3e50; /* Hover effect */
+    }
 
-  input[type="checkbox"] {
-    transform: scale(1.4);
-    accent-color: #0056b3;
-    cursor: pointer;
-  }
+    input[type="checkbox"] {
+        transform: scale(1.4);
+        accent-color: #64b5f6; /* Blue checkbox color */
+        cursor: pointer;
+    }
 
-  input[type="checkbox"]:checked {
-    outline: 2px solid #28a745;
-    background-color: #d4edda;
-  }
+    input[type="checkbox"]:checked {
+        outline: 2px solid #a5d6a7; /* Soft green outline */
+        background-color: #a5d6a7;
+    }
 
-  .strategy-section {
-    margin-top: 30px;
-    padding: 25px;
-    border-left: 6px solid #ffc107;
-    background-color: #fff9e6;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+    .strategy-section {
+        margin-top: 30px;
+        padding: 25px;
+        border-left: 6px solid #fbc02d; /* Muted gold border */
+        background-color: #242424; /* Dark background */
+        margin-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
-  .strategy-section h2, .strategy-section h3 {
-    color: #333333;
-    border-bottom: none;
-    margin-top: 0;
-  }
+    .strategy-section h2, .strategy-section h3 {
+        color: #e0e0e0;
+        border-bottom: none;
+        margin-top: 0;
+    }
 
-  .strategy-section ul {
-    list-style: none;
-    padding-left: 0;
-  }
+    .strategy-section ul {
+        list-style: none;
+        padding-left: 0;
+    }
 
-  .strategy-section li {
-    margin-bottom: 12px;
-    padding-left: 25px;
-    position: relative;
-  }
+    .strategy-section li {
+        margin-bottom: 12px;
+        padding-left: 25px;
+        position: relative;
+    }
 
-  .strategy-section li::before {
-    content: '✅';
-    position: absolute;
-    left: 0;
-    color: #0056b3;
-  }
+    .strategy-section li::before {
+        content: '✅';
+        position: absolute;
+        left: 0;
+        color: #a5d6a7; /* Soft green checkmark */
+    }
 
-  .month-controls {
-    margin: 10px 0 20px;
-  }
+    .month-controls {
+        margin: 10px 0 20px;
+    }
 
-  .month-controls button {
-    margin-right: 10px;
-    padding: 6px 12px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+    .month-controls button {
+        margin-right: 10px;
+        padding: 6px 12px;
+        background-color: #1f2a3a; /* Dark button color */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
 
-  .month-controls button:hover {
-    background-color: #17436b;
-  }
+    .month-controls button:hover {
+        background-color: #2c3e50;
+    }
 
 </style>
 </head>
 <body>
 <div class="container">
 
-<h1>DSA + Full Stack 10-Month Roadmap</h1>
+<h1>SDE 10-Month Roadmap: DSA + Java Backend</h1>
 
-<!-- Strategic Learning Section -->
 <div class="strategy-section">
-  <h2>How to "Do It Better": Strategic Learning & Reinforcement</h2>
-  
-  <h3>Daily Reinforcement Loop 🔄</h3>
-  <ul>
-    <li><strong>Review:</strong> Spend the first 15 minutes of each day reviewing previous topics.</li>
-    <li><strong>Active Recall:</strong> Test your knowledge before consulting notes.</li>
-    <li><strong>Spaced Repetition:</strong> Revisit problems from previous weeks/months.</li>
-  </ul>
+    <h2>How to "Do It Better": Strategic Learning & Reinforcement</h2>
+    
+    <h3>Daily Reinforcement Loop 🔄</h3>
+    <ul>
+        <li><strong>Review:</strong> Spend the first 15 minutes of each day reviewing previous topics.</li>
+        <li><strong>Active Recall:</strong> Test your knowledge before consulting notes.</li>
+        <li><strong>Spaced Repetition:</strong> Revisit problems from previous weeks/months.</li>
+    </ul>
 
-  <h3>Strategic Problem Solving 🧩</h3>
-  <ul>
-    <li><strong>Solve by Pattern:</strong> Group problems by algorithmic patterns.</li>
-    <li><strong>"Why" over "What":</strong> Ask why a particular structure or algorithm is optimal.</li>
-    <li><strong>Mock Interviews:</strong> Practice timed problem solving from Month 4 onwards.</li>
-  </ul>
+    <h3>Strategic Problem Solving 🧩</h3>
+    <ul>
+        <li><strong>Solve by Pattern:</strong> Group problems by algorithmic patterns.</li>
+        <li><strong>"Why" over "What":</strong> Ask why a particular structure or algorithm is optimal.</li>
+        <li><strong>Mock Interviews:</strong> Practice timed problem solving from Month 4 onwards.</li>
+    </ul>
 
-  <h3>Build a "Knowledge Bank" 📚</h3>
-  <ul>
-    <li><strong>Problem Log:</strong> Track solved problems, complexity, and approach.</li>
-    <li><strong>Categorize Doubts:</strong> Identify why you got stuck.</li>
-    <li><strong>Write Clean Code:</strong> Focus on readability and maintainability.</li>
-  </ul>
+    <h3>Build a "Knowledge Bank" 📚</h3>
+    <ul>
+        <li><strong>Problem Log:</strong> Track solved problems, complexity, and approach.</li>
+        <li><strong>Categorize Doubts:</strong> Identify why you got stuck.</li>
+        <li><strong>Write Clean Code:</strong> Focus on readability and maintainability.</li>
+    </ul>
 </div>
 
-<!-- Example: Month 1 Table -->
 <section>
-<h2>Month 1: Basics + Arrays + Strings + Frontend Fundamentals</h2>
-
+<h2>Month 1: Basics + Arrays + Strings</h2>
 <div class="month-controls">
-  <button onclick="markAllDone('month1')">Mark All Done</button>
-  <button onclick="resetMonth('month1')">Reset</button>
+    <button onclick="markAllDone('month1')">Mark All Done</button>
+    <button onclick="resetMonth('month1')">Reset</button>
 </div>
-
 <div class="table-wrapper">
 <table id="month1">
-  <tr>
-    <th>Week</th>
-    <th>Topics (Java + DSA)</th>
-    <th>Narasimha Chapters</th>
-    <th>Full Stack / MERN Topics</th>
-    <th>Focus</th>
-    <th>Practice / Project</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Introduction, Variables, Data Types, Loops, Conditions</td>
-    <td>Ch 1: Introduction</td>
-    <td>HTML Basics: Tags, Elements, Forms</td>
-    <td>Java syntax, basic I/O, loops, conditions</td>
-    <td>CB challenges 1–10, simple webpage project</td>
-    <td><input type="checkbox" id="month1_week1"></td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Functions & 1D Arrays</td>
-    <td>Ch 1 + Arrays</td>
-    <td>CSS Basics: Styling, Flexbox, Layouts</td>
-    <td>Functions, parameters, array traversal, summation</td>
-    <td>CB challenges 11–20, style webpage project</td>
-    <td><input type="checkbox" id="month1_week2"></td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>2D Arrays & ArrayList</td>
-    <td>Ch 1 + Arrays</td>
-    <td>JavaScript Basics: Variables, Loops, Functions</td>
-    <td>Matrix manipulation, dynamic arrays</td>
-    <td>CB challenges 21–32, JS interactive webpage</td>
-    <td><input type="checkbox" id="month1_week3"></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Strings & StringBuilder</td>
-    <td>Ch 15: String Algorithms</td>
-    <td>DOM Manipulation & Event Handling in JS</td>
-    <td>String methods, manipulation, concatenation</td>
-    <td>CB string challenges, interactive UI project</td>
-    <td><input type="checkbox" id="month1_week4"></td>
-  </tr>
-  <!-- Month 2 -->
-<h2>Month 2: Recursion + OOPS + Stacks & Queues + JS Advanced</h2>
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Topics (Java + DSA)</th>
-    <th>Narasimha Chapters</th>
-    <th>Full Stack / MERN Topics</th>
-    <th>Focus</th>
-    <th>Practice / Project</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Recursion Basics</td>
-    <td>Ch 2</td>
-    <td>JS DOM Events & Form Validation</td>
-    <td>Recursive calls, stack visualization</td>
-    <td>CB recursion challenges 1–10, interactive form validation</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Recursion Get & Print + Backtracking</td>
-    <td>Ch 2</td>
-    <td>JS ES6: Arrow functions, Objects, Arrays</td>
-    <td>Return values, printing patterns, backtracking</td>
-    <td>CB backtracking challenges, recursive JS logic project</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>OOPS Basics</td>
-    <td>Ch 1 (ADTs)</td>
-    <td>Node.js Basics: Setup, Modules</td>
-    <td>Classes, objects, encapsulation, inheritance</td>
-    <td>Small OOPS programs, basic Node app</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Stacks & Queues</td>
-    <td>Ch 4, 5</td>
-    <td>Node.js Express Setup + Routes</td>
-    <td>ADTs, implementation using arrays & linked lists</td>
-    <td>CB stack & queue challenges, simple REST API</td>
-    <td><input type="checkbox"></td>
-  </tr>
-</table>
-
-<!-- Month 3 -->
-<h2>Month 3: Linked Lists + Trees + MongoDB Basics</h2>
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Topics (Java + DSA)</th>
-    <th>Narasimha Chapters</th>
-    <th>Full Stack / MERN Topics</th>
-    <th>Focus</th>
-    <th>Practice / Project</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>Linked List Basics</td>
-    <td>Ch 3</td>
-    <td>MongoDB Basics: CRUD, Collections</td>
-    <td>Singly & doubly linked list, circular</td>
-    <td>CB linked list challenges 1–10, DB CRUD practice</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>Advanced Linked Lists</td>
-    <td>Ch 3</td>
-    <td>MongoDB Queries + Aggregation</td>
-    <td>Skip list, memory-efficient lists</td>
-    <td>CB linked list challenges 11–14, aggregation queries</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>Trees: Binary Trees</td>
-    <td>Ch 6</td>
-    <td>React Basics: Components, Props, State</td>
-    <td>Tree traversal, properties</td>
-    <td>CB trees challenges 1–8, simple React UI</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>Trees: BST & AVL</td>
-    <td>Ch 6</td>
-    <td>React Forms & Event Handling</td>
-    <td>Insertion, deletion, balancing</td>
-    <td>CB trees challenges 9–16, interactive React form</td>
-    <td><input type="checkbox"></td>
-  </tr>
-</table>
-
-<!-- Month 4 -->
-<h2>Month 4: Heap + Graphs + Hashing + MERN Integration</h2>
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Topics (Java + DSA)</th>
-    <th>Narasimha Chapters</th>
-    <th>Full Stack / MERN Topics</th>
-    <th>Focus</th>
-    <th>Practice / Project</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>Heap + Priority Queue</td>
-    <td>Ch 7</td>
-    <td>React Router & State Management</td>
-    <td>Min/Max heap, priority queue applications</td>
-    <td>CB heap challenges, small React SPA</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>Graphs: Basics</td>
-    <td>Ch 9</td>
-    <td>Express + MongoDB Integration</td>
-    <td>Graph representation, DFS, BFS</td>
-    <td>CB graph challenges 1–8, backend API connection</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>Graphs: Advanced</td>
-    <td>Ch 9</td>
-    <td>React + Express Integration (Fetch API)</td>
-    <td>Shortest path, MST, topological sort</td>
-    <td>CB graph challenges 9–16, small MERN app</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>HashMap & Hashing</td>
-    <td>Ch 14</td>
-    <td>MERN Mini Project 1 (Todo App)</td>
-    <td>Hash tables, collisions, chaining</td>
-    <td>CB hashing challenges, Todo App</td>
-    <td><input type="checkbox"></td>
-  </tr>
-</table>
-
-<!-- Month 5 -->
-<h2>Month 5: DP + Greedy + Divide & Conquer + Advanced MERN</h2>
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Topics (Java + DSA)</th>
-    <th>Narasimha Chapters</th>
-    <th>Full Stack / MERN Topics</th>
-    <th>Focus</th>
-    <th>Practice / Project</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>DP Basics</td>
-    <td>Ch 19</td>
-    <td>React Hooks: useState, useEffect</td>
-    <td>LCS, Fibonacci, subset sum</td>
-    <td>CB DP challenges 1–8, React interactive components</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>DP Advanced</td>
-    <td>Ch 19</td>
-    <td>React Context + Reducer</td>
-    <td>Matrix chain, knapsack, DP on strings</td>
-    <td>CB DP challenges 9–23, state management project</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>19</td>
-    <td>Greedy Algorithms</td>
-    <td>Ch 17</td>
-    <td>MERN Mini Project 2 (Blog App)</td>
-    <td>Activity selection, fractional knapsack</td>
-    <td>CB greedy challenges, Blog App</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>Divide & Conquer</td>
-    <td>Ch 18</td>
-    <td>MERN Project: Deployment (Netlify + Heroku)</td>
-    <td>Merge sort, quicksort, binary search</td>
-    <td>CB divide & conquer challenges, deploy previous apps</td>
-    <td><input type="checkbox"></td>
-  </tr>
-</table>
-
-<!-- Month 6 -->
-<h2>Month 6: Advanced Topics + Revision + Full Stack Projects</h2>
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Topics (Java + DSA)</th>
-    <th>Narasimha Chapters</th>
-    <th>Full Stack / MERN Topics</th>
-    <th>Focus</th>
-    <th>Practice / Project</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>21</td>
-    <td>Text Processing & String Algorithms</td>
-    <td>Ch 15</td>
-    <td>Advanced React + Routing + Auth</td>
-    <td>KMP, Tries, Suffix trees</td>
-    <td>CB text processing challenges, secure login app</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>Segment Tree & Bitmasking</td>
-    <td>CB Section 20, 22</td>
-    <td>MERN Mini Project 3 (E-Commerce App)</td>
-    <td>Range queries, bitmask DP</td>
-    <td>CB challenges, E-Commerce App</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>23</td>
-    <td>Misc Topics: Game, AVL, Adapters, Collections</td>
-    <td>Ch 6 + CB Sections</td>
-    <td>MERN Project Integration & Optimization</td>
-    <td>Collections, Java utilities</td>
-    <td>CB challenges, combine mini-projects</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>24</td>
-    <td>Revision & Mock Interview Prep</td>
-    <td>All chapters</td>
-    <td>Full Stack Interview Prep</td>
-    <td>Revise weak areas, practice interview questions</td>
-    <td>Solve top 50 CB + Narasimha problems + full project portfolio</td>
-    <td><input type="checkbox"></td>
-  </tr>
-</table>
-
-<!-- Month 7: Spring Boot Basics -->
-<h2>Month 7: Spring Boot Basics</h2>
-<table>
-<tr>
-<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
-</tr>
-<tr><td>25</td><td>Spring Boot Setup & Project Structure</td><td>Spring Boot starter projects, Maven, application.properties</td><td>Create basic REST APIs</td><td><input type="checkbox"></td></tr>
-<tr><td>26</td><td>Controllers & Endpoints</td><td>RequestMapping, Get/Post/Put/Delete</td><td>Simple CRUD APIs</td><td><input type="checkbox"></td></tr>
-<tr><td>27</td><td>Service Layer & Repository Layer</td><td>Business logic separation, Spring Data JPA</td><td>CRUD with MySQL/Postgres</td><td><input type="checkbox"></td></tr>
-<tr><td>28</td><td>Spring Security & JWT Auth</td><td>User authentication, roles, tokens</td><td>Secure REST API</td><td><input type="checkbox"></td></tr>
-</table>
-
-<!-- Month 8: Advanced Spring Boot -->
-<h2>Month 8: Advanced Spring Boot </h2>
-<table>
-<tr>
-<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
-</tr>
-<tr><td>29</td><td>Exception Handling & Validation</td><td>Global exception handlers, input validation</td><td>Enhance previous API project</td><td><input type="checkbox"></td></tr>
-<tr><td>30</td><td>Unit Testing & Postman</td><td>JUnit, Mockito, API testing</td><td>Write test cases for CRUD APIs</td><td><input type="checkbox"></td></tr>
-<tr><td>31</td><td>Advanced Topics: Caching, Pagination</td><td>Spring Cache, Pageable, Sorting</td><td>Improve API performance</td><td><input type="checkbox"></td></tr>
-<tr><td>32</td><td>Mini Project: Backend Only</td><td>Full CRUD + Auth + DB Integration</td><td>Simple Job Portal / Blog</td><td><input type="checkbox"></td></tr>
-</table>
-
-<!-- Month 9: Frontend Basics & React -->
-<h2>Month 9: Frontend Basics + React</h2>
-<table>
-<tr>
-<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
-</tr>
-<tr><td>33</td><td>HTML, CSS, JS Basics</td><td>DOM, Forms, Events</td><td>Static pages for project</td><td><input type="checkbox"></td></tr>
-<tr><td>34</td><td>React Basics</td><td>Components, Props, State, JSX</td><td>Simple React components</td><td><input type="checkbox"></td></tr>
-<tr><td>35</td><td>Advanced React</td><td>Hooks, Context API, Router</td><td>Integrate with backend APIs</td><td><input type="checkbox"></td></tr>
-<tr><td>36</td><td>Project Integration</td><td>React + Spring Boot APIs</td><td>Display & interact with backend data</td><td><input type="checkbox"></td></tr>
-</table>
-
-<!-- Month 10: Full Stack Projects & Deployment -->
-<h2>Month 10: Full Stack Projects + Deployment</h2>
-<table>
-<tr>
-<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
-</tr>
-<tr><td>37</td><td>Full Stack Project Development</td><td>End-to-end CRUD, Auth, Frontend routing</td><td>Job Portal / E-commerce / Blog</td><td><input type="checkbox"></td></tr>
-<tr><td>38</td><td>Testing & Debugging</td><td>API & UI testing, fix bugs</td><td>Project completion</td><td><input type="checkbox"></td></tr>
-<tr><td>39</td><td>Deployment Basics</td><td>Heroku, AWS, Environment setup</td><td>Deploy project online</td><td><input type="checkbox"></td></tr>
-<tr><td>40</td><td>Portfolio & Interview Prep</td><td>Showcase projects, GitHub, Resume</td><td>Revise DSA + Projects</td><td><input type="checkbox"></td></tr>
-</table>
+    <tr>
+        <th>Week</th>
+        <th>Topics (Java + DSA)</th>
+        <th>Narasimha Chapters</th>
+        <th>Backend / SDE Topics</th>
+        <th>Focus</th>
+        <th>Practice / Project</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Introduction, Variables, Data Types, Loops, Conditions</td>
+        <td>Ch 1: Introduction</td>
+        <td>Core Java: IDE setup, basic syntax</td>
+        <td>Java syntax, basic I/O, loops, conditions</td>
+        <td>CB challenges 1–10, small console applications</td>
+        <td><input type="checkbox" id="month1_week1"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Functions & 1D Arrays</td>
+        <td>Ch 1 + Arrays</td>
+        <td>Core Java: Function overloading, varargs</td>
+        <td>Functions, parameters, array traversal, summation</td>
+        <td>CB challenges 11–20, array-based problem solving</td>
+        <td><input type="checkbox" id="month1_week2"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>2D Arrays & ArrayList</td>
+        <td>Ch 1 + Arrays</td>
+        <td>Collections: ArrayList, List interface</td>
+        <td>Matrix manipulation, dynamic arrays</td>
+        <td>CB challenges 21–32, small program with dynamic data</td>
+        <td><input type="checkbox" id="month1_week3"></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Strings & StringBuilder</td>
+        <td>Ch 15: String Algorithms</td>
+        <td>Core Java: String immutability, StringBuilder vs String</td>
+        <td>String methods, manipulation, concatenation</td>
+        <td>CB string challenges, basic text processing program</td>
+        <td><input type="checkbox" id="month1_week4"></td>
+    </tr>
 </table>
 </div>
 </section>
 
-<!-- Repeat similar sections for Month 2 – Month 10 -->
-<!-- For brevity, you can copy the structure above and update IDs like month2_week1, month2_week2... etc -->
+<section>
+<h2>Month 2: Recursion + OOPS + Collections</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month2')">Mark All Done</button>
+    <button onclick="resetMonth('month2')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month2">
+    <tr>
+        <th>Week</th>
+        <th>Topics (Java + DSA)</th>
+        <th>Narasimha Chapters</th>
+        <th>Backend / SDE Topics</th>
+        <th>Focus</th>
+        <th>Practice / Project</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Recursion Basics</td>
+        <td>Ch 2</td>
+        <td>Core Java: Call stack visualization</td>
+        <td>Recursive calls, base cases, visualizing the call stack</td>
+        <td>CB recursion challenges 1–10, recursion exercises</td>
+        <td><input type="checkbox" id="month2_week5"></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Recursion with Return + Backtracking</td>
+        <td>Ch 2</td>
+        <td>Algorithms: Permutations, Combinations</td>
+        <td>Return values from recursion, exploring all paths</td>
+        <td>CB backtracking challenges, N-Queens problem</td>
+        <td><input type="checkbox" id="month2_week6"></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>OOPS Basics</td>
+        <td>Ch 1 (ADTs)</td>
+        <td>Core Java: Classes, Objects, Encapsulation, Abstraction</td>
+        <td>Classes, objects, encapsulation, inheritance</td>
+        <td>Small OOPS programs, design a simple car/bank system</td>
+        <td><input type="checkbox" id="month2_week7"></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Collections Framework</td>
+        <td>Ch 4, 5</td>
+        <td>Collections: Set, Queue, Stack, PriorityQueue</td>
+        <td>ADTs, implementation, choosing the right collection</td>
+        <td>CB challenges for each collection, small project using a collection</td>
+        <td><input type="checkbox" id="month2_week8"></td>
+    </tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 3: Linked Lists + Trees + Hashing</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month3')">Mark All Done</button>
+    <button onclick="resetMonth('month3')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month3">
+    <tr>
+        <th>Week</th>
+        <th>Topics (Java + DSA)</th>
+        <th>Narasimha Chapters</th>
+        <th>Backend / SDE Topics</th>
+        <th>Focus</th>
+        <th>Practice / Project</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Linked List Basics</td>
+        <td>Ch 3</td>
+        <td>Data Structures: Nodes, pointers, memory allocation</td>
+        <td>Singly, doubly & circular linked lists, traversal</td>
+        <td>CB linked list challenges 1–10, implement a stack with a linked list</td>
+        <td><input type="checkbox" id="month3_week9"></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Advanced Linked Lists</td>
+        <td>Ch 3</td>
+        <td>Algorithms: Cycle detection, merging sorted lists</td>
+        <td>Fast/slow pointers, merge sort on lists</td>
+        <td>CB linked list challenges 11–14, solve common linked list problems</td>
+        <td><input type="checkbox" id="month3_week10"></td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Trees: Binary Trees</td>
+        <td>Ch 6</td>
+        <td>Data Structures: Tree traversals (inorder, preorder, postorder)</td>
+        <td>Tree traversal (iterative vs recursive), properties</td>
+        <td>CB trees challenges 1–8, implement a simple tree</td>
+        <td><input type="checkbox" id="month3_week11"></td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Hashing & HashMaps</td>
+        <td>Ch 14</td>
+        <td>Data Structures: Hash functions, collisions, load factor</td>
+        <td>Hash tables, internal working of a HashMap</td>
+        <td>CB hashing challenges, build a frequency counter program</td>
+        <td><input type="checkbox" id="month3_week12"></td>
+    </tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 4: Heap + Graphs + Interview Prep</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month4')">Mark All Done</button>
+    <button onclick="resetMonth('month4')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month4">
+    <tr>
+        <th>Week</th>
+        <th>Topics (Java + DSA)</th>
+        <th>Narasimha Chapters</th>
+        <th>Backend / SDE Topics</th>
+        <th>Focus</th>
+        <th>Practice / Project</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>Heap + Priority Queue</td>
+        <td>Ch 7</td>
+        <td>Data Structures: Binary heap implementation, applications</td>
+        <td>Min/Max heap, priority queue applications</td>
+        <td>CB heap challenges, problems involving k-th largest element</td>
+        <td><input type="checkbox" id="month4_week13"></td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>Graphs: Basics</td>
+        <td>Ch 9</td>
+        <td>Algorithms: Graph traversal (BFS, DFS)</td>
+        <td>Graph representation (adjacency list/matrix)</td>
+        <td>CB graph challenges 1–8, maze solver project</td>
+        <td><input type="checkbox" id="month4_week14"></td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>Graphs: Advanced</td>
+        <td>Ch 9</td>
+        <td>Algorithms: Shortest path, MST, topological sort</td>
+        <td>Dijkstra's, Prim's, and Kruskal's algorithms</td>
+        <td>CB graph challenges 9–16, network pathfinding problem</td>
+        <td><input type="checkbox" id="month4_week15"></td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>Revision & Mock Interviews</td>
+        <td>All chapters</td>
+        <td>Interviewing: Whiteboarding, behavioral questions, problem-solving</td>
+        <td>Revise all DSA topics, practice timed problem-solving</td>
+        <td>LeetCode/HackerRank contests, peer mock interviews</td>
+        <td><input type="checkbox" id="month4_week16"></td>
+    </tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 5: Spring Boot Basics + Database</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month5')">Mark All Done</button>
+    <button onclick="resetMonth('month5')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month5">
+    <tr>
+        <th>Week</th>
+        <th>Topics (Java + DSA)</th>
+        <th>Narasimha Chapters</th>
+        <th>Backend / SDE Topics</th>
+        <th>Focus</th>
+        <th>Practice / Project</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>DP Basics</td>
+        <td>Ch 19</td>
+        <td>Spring Boot: Setup, project structure, REST APIs</td>
+        <td>Introduction to dynamic programming, memoization</td>
+        <td>CB DP challenges 1–8, "Hello World" Spring Boot API</td>
+        <td><input type="checkbox" id="month5_week17"></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>DP Advanced</td>
+        <td>Ch 19</td>
+        <td>Databases: SQL basics, schema design</td>
+        <td>Solving complex DP problems (knapsack, matrix chain)</td>
+        <td>CB DP challenges 9–23, simple database project</td>
+        <td><input type="checkbox" id="month5_week18"></td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>Greedy Algorithms</td>
+        <td>Ch 17</td>
+        <td>Spring Data JPA: Connecting to a database</td>
+        <td>Activity selection, fractional knapsack</td>
+        <td>CB greedy challenges, basic CRUD API with JPA</td>
+        <td><input type="checkbox" id="month5_week19"></td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>Divide & Conquer</td>
+        <td>Ch 18</td>
+        <td>Spring Boot: RESTful services, Controllers, Services</td>
+        <td>Merge sort, quicksort, binary search</td>
+        <td>CB divide & conquer challenges, "Todo List" backend API</td>
+        <td><input type="checkbox" id="month5_week20"></td>
+    </tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 6: Spring Security + Testing + Mini Project</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month6')">Mark All Done</button>
+    <button onclick="resetMonth('month6')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month6">
+    <tr>
+        <th>Week</th>
+        <th>Topics (Java + DSA)</th>
+        <th>Narasimha Chapters</th>
+        <th>Backend / SDE Topics</th>
+        <th>Focus</th>
+        <th>Practice / Project</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>Text Processing & String Algorithms</td>
+        <td>Ch 15</td>
+        <td>Spring Security: Authentication, Authorization, JWT</td>
+        <td>KMP, Tries, Suffix trees</td>
+        <td>CB text processing challenges, secure an API with JWT</td>
+        <td><input type="checkbox" id="month6_week21"></td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>Segment Tree & Bitmasking</td>
+        <td>CB Section 20, 22</td>
+        <td>Unit Testing: JUnit, Mockito, Test-Driven Development</td>
+        <td>Range queries, bitmask DP</td>
+        <td>CB challenges, write tests for the "Todo List" API</td>
+        <td><input type="checkbox" id="month6_week22"></td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>Misc Topics: Game, AVL, Adapters, Collections</td>
+        <td>Ch 6 + CB Sections</td>
+        <td>API Documentation: Swagger/OpenAPI, Postman</td>
+        <td>Collections, Java utilities, design patterns</td>
+        <td>CB challenges, document your mini-project API</td>
+        <td><input type="checkbox" id="month6_week23"></td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>Revision & Mock Interview Prep</td>
+        <td>All chapters</td>
+        <td>Backend Mini Project: Backend only, fully functional</td>
+        <td>Revise weak areas, practice interview questions</td>
+        <td>Solve top 50 CB + Narasimha problems + full backend project</td>
+        <td><input type="checkbox" id="month6_week24"></td>
+    </tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 7: Advanced Spring Boot & Messaging</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month7')">Mark All Done</button>
+    <button onclick="resetMonth('month7')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month7">
+<tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Focus</th>
+    <th>Practice / Projects</th>
+    <th>Done</th>
+</tr>
+<tr>
+    <td>25</td>
+    <td>Advanced Spring: Caching, Pagination, Transaction Management</td>
+    <td>Improving API performance, handling large datasets</td>
+    <td>Implement caching on your mini-project</td>
+    <td><input type="checkbox" id="month7_week25"></td>
+</tr>
+<tr>
+    <td>26</td>
+    <td>Messaging: RabbitMQ / Kafka</td>
+    <td>Introduction to asynchronous communication, message queues</td>
+    <td>Send & receive messages between two services</td>
+    <td><input type="checkbox" id="month7_week26"></td>
+</tr>
+<tr>
+    <td>27</td>
+    <td>Spring Boot Actuator & Monitoring</td>
+    <td>Health checks, metrics, monitoring tools</td>
+    <td>Add Actuator to your project</td>
+    <td><input type="checkbox" id="month7_week27"></td>
+</tr>
+<tr>
+    <td>28</td>
+    <td>Mini-Project: Backend Messaging</td>
+    <td>Integrate messaging for a simple notification system or job queue</td>
+    <td>Create a backend service with messaging</td>
+    <td><input type="checkbox" id="month7_week28"></td>
+</tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 8: Microservices & Docker</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month8')">Mark All Done</button>
+    <button onclick="resetMonth('month8')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month8">
+<tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Focus</th>
+    <th>Practice / Projects</th>
+    <th>Done</th>
+</tr>
+<tr>
+    <td>29</td>
+    <td>Microservices Architecture</td>
+    <td>Design principles, service discovery, API Gateway</td>
+    <td>Break a monolith project into microservices</td>
+    <td><input type="checkbox" id="month8_week29"></td>
+</tr>
+<tr>
+    <td>30</td>
+    <td>Docker Basics</td>
+    <td>Containers, images, Dockerfiles, Docker Compose</td>
+    <td>Containerize a Spring Boot application</td>
+    <td><input type="checkbox" id="month8_week30"></td>
+</tr>
+<tr>
+    <td>31</td>
+    <td>Dockerizing Microservices</td>
+    <td>Creating a multi-container application</td>
+    <td>Containerize multiple services from your project</td>
+    <td><input type="checkbox" id="month8_week31"></td>
+</tr>
+<tr>
+    <td>32</td>
+    <td>Mini Project: Docker Compose</td>
+    <td>Run a complete multi-service application locally with Docker Compose</td>
+    <td>Create a Job Portal with user and job services</td>
+    <td><input type="checkbox" id="month8_week32"></td>
+</tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 9: Systems Design & Scalability</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month9')">Mark All Done</button>
+    <button onclick="resetMonth('month9')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month9">
+<tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Focus</th>
+    <th>Practice / Projects</th>
+    <th>Done</th>
+</tr>
+<tr>
+    <td>33</td>
+    <td>Systems Design Fundamentals</td>
+    <td>Scalability, availability, load balancing, caching</td>
+    <td>Read "Designing Data-Intensive Applications" (first few chapters)</td>
+    <td><input type="checkbox" id="month9_week33"></td>
+</tr>
+<tr>
+    <td>34</td>
+    <td>High-Level System Design</td>
+    <td>Design a URL Shortener, TinyURL, or Twitter</td>
+    <td>Practice high-level design interview questions</td>
+    <td><input type="checkbox" id="month9_week34"></td>
+</tr>
+<tr>
+    <td>35</td>
+    <td>Distributed Systems Concepts</td>
+    <td>CAP theorem, distributed transactions, consistency</td>
+    <td>Explore how Google Search or YouTube works</td>
+    <td><input type="checkbox" id="month9_week35"></td>
+</tr>
+<tr>
+    <td>36</td>
+    <td>Review & Deeper Dive</td>
+    <td>Revisit your microservices project and discuss its scalability</td>
+    <td>Review and critique systems design examples</td>
+    <td><input type="checkbox" id="month9_week36"></td>
+</tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Month 10: Final Project & Job Prep</h2>
+<div class="month-controls">
+    <button onclick="markAllDone('month10')">Mark All Done</button>
+    <button onclick="resetMonth('month10')">Reset</button>
+</div>
+<div class="table-wrapper">
+<table id="month10">
+<tr>
+    <th>Week</th>
+    <th>Topics</th>
+    <th>Focus</th>
+    <th>Practice / Projects</th>
+    <th>Done</th>
+</tr>
+<tr>
+    <td>37</td>
+    <td>Final Project: E-commerce Backend</td>
+    <td>End-to-end user management, product catalog, payment integration</td>
+    <td>Build a robust, multi-service e-commerce backend</td>
+    <td><input type="checkbox" id="month10_week37"></td>
+</tr>
+<tr>
+    <td>38</td>
+    <td>Final Project: API & Database</td>
+    <td>Implement all features, handle errors, optimize queries</td>
+    <td>Finalize the e-commerce backend project</td>
+    <td><input type="checkbox" id="month10_week38"></td>
+</tr>
+<tr>
+    <td>39</td>
+    <td>Deployment & CI/CD</td>
+    <td>Heroku/AWS deployment, GitHub Actions, Jenkins</td>
+    <td>Deploy your final project online</td>
+    <td><input type="checkbox" id="month10_week39"></td>
+</tr>
+<tr>
+    <td>40</td>
+    <td>Portfolio & Interview Prep</td>
+    <td>Showcase projects on GitHub, write a strong resume</td>
+    <td>Revise all topics, apply for jobs, mock interviews</td>
+    <td><input type="checkbox" id="month10_week40"></td>
+</tr>
+</table>
+</div>
+</section>
 
 <script>
 // Save & load checkboxes using unique IDs
 document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-  const saved = localStorage.getItem(cb.id);
-  if (saved === 'true') cb.checked = true;
+    const saved = localStorage.getItem(cb.id);
+    if (saved === 'true') cb.checked = true;
 
-  cb.addEventListener('change', () => {
-    localStorage.setItem(cb.id, cb.checked);
-  });
+    cb.addEventListener('change', () => {
+        localStorage.setItem(cb.id, cb.checked);
+    });
 });
 
 // Mark all done / Reset buttons per month
 function markAllDone(monthId) {
-  document.querySelectorAll(`#${monthId} input[type="checkbox"]`).forEach(cb => {
-    cb.checked = true;
-    localStorage.setItem(cb.id, true);
-  });
+    document.querySelectorAll(`#${monthId} input[type="checkbox"]`).forEach(cb => {
+        cb.checked = true;
+        localStorage.setItem(cb.id, true);
+    });
 }
 
 function resetMonth(monthId) {
-  document.querySelectorAll(`#${monthId} input[type="checkbox"]`).forEach(cb => {
-    cb.checked = false;
-    localStorage.setItem(cb.id, false);
-  });
+    document.querySelectorAll(`#${monthId} input[type="checkbox"]`).forEach(cb => {
+        cb.checked = false;
+        localStorage.setItem(cb.id, false);
+    });
 }
 </script>
 
