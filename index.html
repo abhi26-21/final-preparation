@@ -3,325 +3,566 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coding Blocks 6-Month Roadmap</title>
+<title>DSA + Full Stack 10-Month Roadmap</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
   body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    line-height: 1.5;
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    color: #212529;
+    background-color: #f4f7f9;
   }
-  h1, h2 {
-    color: #2c3e50;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
+
+  h1, h2, h3 {
+    color: #0056b3;
+    padding-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    color: #17436b;
+    border-bottom: 3px solid #0056b3;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
     margin-bottom: 40px;
   }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+  }
+
   th, td {
-    border: 1px solid #bdc3c7;
-    padding: 10px;
+    border: 1px solid #e9ecef;
+    padding: 14px 18px;
     text-align: left;
+    transition: background-color 0.3s ease;
   }
+
   th {
-    background-color: #2980b9;
+    background-color: #0056b3;
     color: white;
+    font-weight: 700;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 2;
   }
+
   tr:nth-child(even) {
-    background-color: #ecf0f1;
+    background-color: #f8f9fa;
   }
+
+  tr:hover {
+    background-color: #e2f0ff;
+  }
+
   input[type="checkbox"] {
-    transform: scale(1.3);
+    transform: scale(1.4);
+    accent-color: #0056b3;
+    cursor: pointer;
   }
+
+  input[type="checkbox"]:checked {
+    outline: 2px solid #28a745;
+    background-color: #d4edda;
+  }
+
+  .strategy-section {
+    margin-top: 30px;
+    padding: 25px;
+    border-left: 6px solid #ffc107;
+    background-color: #fff9e6;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .strategy-section h2, .strategy-section h3 {
+    color: #333333;
+    border-bottom: none;
+    margin-top: 0;
+  }
+
+  .strategy-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .strategy-section li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+  }
+
+  .strategy-section li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    color: #0056b3;
+  }
+
+  .month-controls {
+    margin: 10px 0 20px;
+  }
+
+  .month-controls button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .month-controls button:hover {
+    background-color: #17436b;
+  }
+
 </style>
 </head>
 <body>
+<div class="container">
 
-<h1>Coding Blocks + Narasimha Karumanchi 6-Month Roadmap</h1>
+<h1>DSA + Full Stack 10-Month Roadmap</h1>
 
-<!-- Month 1 -->
-<h2>Month 1: Basics + Arrays + Strings</h2>
-<table>
+<!-- Strategic Learning Section -->
+<div class="strategy-section">
+  <h2>How to "Do It Better": Strategic Learning & Reinforcement</h2>
+  
+  <h3>Daily Reinforcement Loop 🔄</h3>
+  <ul>
+    <li><strong>Review:</strong> Spend the first 15 minutes of each day reviewing previous topics.</li>
+    <li><strong>Active Recall:</strong> Test your knowledge before consulting notes.</li>
+    <li><strong>Spaced Repetition:</strong> Revisit problems from previous weeks/months.</li>
+  </ul>
+
+  <h3>Strategic Problem Solving 🧩</h3>
+  <ul>
+    <li><strong>Solve by Pattern:</strong> Group problems by algorithmic patterns.</li>
+    <li><strong>"Why" over "What":</strong> Ask why a particular structure or algorithm is optimal.</li>
+    <li><strong>Mock Interviews:</strong> Practice timed problem solving from Month 4 onwards.</li>
+  </ul>
+
+  <h3>Build a "Knowledge Bank" 📚</h3>
+  <ul>
+    <li><strong>Problem Log:</strong> Track solved problems, complexity, and approach.</li>
+    <li><strong>Categorize Doubts:</strong> Identify why you got stuck.</li>
+    <li><strong>Write Clean Code:</strong> Focus on readability and maintainability.</li>
+  </ul>
+</div>
+
+<!-- Example: Month 1 Table -->
+<section>
+<h2>Month 1: Basics + Arrays + Strings + Frontend Fundamentals</h2>
+
+<div class="month-controls">
+  <button onclick="markAllDone('month1')">Mark All Done</button>
+  <button onclick="resetMonth('month1')">Reset</button>
+</div>
+
+<div class="table-wrapper">
+<table id="month1">
   <tr>
     <th>Week</th>
-    <th>Topics (Coding Blocks)</th>
+    <th>Topics (Java + DSA)</th>
     <th>Narasimha Chapters</th>
+    <th>Full Stack / MERN Topics</th>
     <th>Focus</th>
-    <th>Practice</th>
+    <th>Practice / Project</th>
     <th>Done</th>
   </tr>
   <tr>
     <td>1</td>
-    <td>Introduction, Variables, Data Types, NS & DT, Fundamentals & Patterns</td>
+    <td>Introduction, Variables, Data Types, Loops, Conditions</td>
     <td>Ch 1: Introduction</td>
+    <td>HTML Basics: Tags, Elements, Forms</td>
     <td>Java syntax, basic I/O, loops, conditions</td>
-    <td>CB challenges 1–10</td>
-    <td><input type="checkbox"></td>
+    <td>CB challenges 1–10, simple webpage project</td>
+    <td><input type="checkbox" id="month1_week1"></td>
   </tr>
   <tr>
     <td>2</td>
     <td>Functions & 1D Arrays</td>
-    <td>Ch 1 + Arrays problems</td>
+    <td>Ch 1 + Arrays</td>
+    <td>CSS Basics: Styling, Flexbox, Layouts</td>
     <td>Functions, parameters, array traversal, summation</td>
-    <td>CB challenges 11–20</td>
-    <td><input type="checkbox"></td>
+    <td>CB challenges 11–20, style webpage project</td>
+    <td><input type="checkbox" id="month1_week2"></td>
   </tr>
   <tr>
     <td>3</td>
     <td>2D Arrays & ArrayList</td>
     <td>Ch 1 + Arrays</td>
+    <td>JavaScript Basics: Variables, Loops, Functions</td>
     <td>Matrix manipulation, dynamic arrays</td>
-    <td>CB challenges 21–32</td>
-    <td><input type="checkbox"></td>
+    <td>CB challenges 21–32, JS interactive webpage</td>
+    <td><input type="checkbox" id="month1_week3"></td>
   </tr>
   <tr>
     <td>4</td>
-    <td>String & StringBuilder</td>
+    <td>Strings & StringBuilder</td>
     <td>Ch 15: String Algorithms</td>
+    <td>DOM Manipulation & Event Handling in JS</td>
     <td>String methods, manipulation, concatenation</td>
-    <td>CB string challenges</td>
-    <td><input type="checkbox"></td>
+    <td>CB string challenges, interactive UI project</td>
+    <td><input type="checkbox" id="month1_week4"></td>
   </tr>
-</table>
-
-<!-- Month 2 -->
-<h2>Month 2: Recursion + OOPS + Stacks & Queues</h2>
+  <!-- Month 2 -->
+<h2>Month 2: Recursion + OOPS + Stacks & Queues + JS Advanced</h2>
 <table>
-  <tr>
-    <th>Week</th>
-    <th>Topics</th>
-    <th>Narasimha Chapters</th>
-    <th>Focus</th>
-    <th>Practice</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Recursion Basics</td>
-    <td>Ch 2</td>
-    <td>Recursive calls, stack visualization</td>
-    <td>CB recursion challenges 1–10</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Recursion Get & Print + Backtracking</td>
-    <td>Ch 2</td>
-    <td>Return values, printing patterns, N-Queens, Sudoku</td>
-    <td>CB backtracking challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>OOPS Basics</td>
-    <td>Ch 1 (ADTs)</td>
-    <td>Classes, objects, encapsulation, inheritance</td>
-    <td>Small OOPS programs</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Stacks & Queues</td>
-    <td>Ch 4, 5</td>
-    <td>ADTs, implementation using arrays & linked lists</td>
-    <td>CB stack & queue challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
+  <tr>
+    <th>Week</th>
+    <th>Topics (Java + DSA)</th>
+    <th>Narasimha Chapters</th>
+    <th>Full Stack / MERN Topics</th>
+    <th>Focus</th>
+    <th>Practice / Project</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Recursion Basics</td>
+    <td>Ch 2</td>
+    <td>JS DOM Events & Form Validation</td>
+    <td>Recursive calls, stack visualization</td>
+    <td>CB recursion challenges 1–10, interactive form validation</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Recursion Get & Print + Backtracking</td>
+    <td>Ch 2</td>
+    <td>JS ES6: Arrow functions, Objects, Arrays</td>
+    <td>Return values, printing patterns, backtracking</td>
+    <td>CB backtracking challenges, recursive JS logic project</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>OOPS Basics</td>
+    <td>Ch 1 (ADTs)</td>
+    <td>Node.js Basics: Setup, Modules</td>
+    <td>Classes, objects, encapsulation, inheritance</td>
+    <td>Small OOPS programs, basic Node app</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Stacks & Queues</td>
+    <td>Ch 4, 5</td>
+    <td>Node.js Express Setup + Routes</td>
+    <td>ADTs, implementation using arrays & linked lists</td>
+    <td>CB stack & queue challenges, simple REST API</td>
+    <td><input type="checkbox"></td>
+  </tr>
 </table>
 
 <!-- Month 3 -->
-<h2>Month 3: Linked Lists + Trees (Basics)</h2>
+<h2>Month 3: Linked Lists + Trees + MongoDB Basics</h2>
 <table>
-  <tr>
-    <th>Week</th>
-    <th>Topics</th>
-    <th>Narasimha Chapters</th>
-    <th>Focus</th>
-    <th>Practice</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>Linked List Basics</td>
-    <td>Ch 3</td>
-    <td>Singly & doubly linked list, circular</td>
-    <td>CB linked list challenges 1–10</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>Advanced Linked Lists</td>
-    <td>Ch 3</td>
-    <td>Skip list, memory-efficient lists</td>
-    <td>CB linked list challenges 11–14</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>Trees: Binary Trees</td>
-    <td>Ch 6</td>
-    <td>Tree traversal, properties</td>
-    <td>CB trees challenges 1–8</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>Trees: BST & AVL</td>
-    <td>Ch 6</td>
-    <td>Insertion, deletion, balancing</td>
-    <td>CB trees challenges 9–16</td>
-    <td><input type="checkbox"></td>
-  </tr>
+  <tr>
+    <th>Week</th>
+    <th>Topics (Java + DSA)</th>
+    <th>Narasimha Chapters</th>
+    <th>Full Stack / MERN Topics</th>
+    <th>Focus</th>
+    <th>Practice / Project</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Linked List Basics</td>
+    <td>Ch 3</td>
+    <td>MongoDB Basics: CRUD, Collections</td>
+    <td>Singly & doubly linked list, circular</td>
+    <td>CB linked list challenges 1–10, DB CRUD practice</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Advanced Linked Lists</td>
+    <td>Ch 3</td>
+    <td>MongoDB Queries + Aggregation</td>
+    <td>Skip list, memory-efficient lists</td>
+    <td>CB linked list challenges 11–14, aggregation queries</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Trees: Binary Trees</td>
+    <td>Ch 6</td>
+    <td>React Basics: Components, Props, State</td>
+    <td>Tree traversal, properties</td>
+    <td>CB trees challenges 1–8, simple React UI</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Trees: BST & AVL</td>
+    <td>Ch 6</td>
+    <td>React Forms & Event Handling</td>
+    <td>Insertion, deletion, balancing</td>
+    <td>CB trees challenges 9–16, interactive React form</td>
+    <td><input type="checkbox"></td>
+  </tr>
 </table>
 
 <!-- Month 4 -->
-<h2>Month 4: Heap + Graphs + Hashing</h2>
+<h2>Month 4: Heap + Graphs + Hashing + MERN Integration</h2>
 <table>
-  <tr>
-    <th>Week</th>
-    <th>Topics</th>
-    <th>Narasimha Chapters</th>
-    <th>Focus</th>
-    <th>Practice</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>Heap + Priority Queue</td>
-    <td>Ch 7</td>
-    <td>Min/Max heap, priority queue applications</td>
-    <td>CB heap challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>Graphs: Basics</td>
-    <td>Ch 9</td>
-    <td>Graph representation, DFS, BFS</td>
-    <td>CB graph challenges 1–8</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>Graphs: Advanced</td>
-    <td>Ch 9</td>
-    <td>Shortest path, MST, topological sort</td>
-    <td>CB graph challenges 9–16</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>HashMap & Hashing</td>
-    <td>Ch 14</td>
-    <td>Hash tables, collisions, chaining, open addressing</td>
-    <td>CB hashing challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
+  <tr>
+    <th>Week</th>
+    <th>Topics (Java + DSA)</th>
+    <th>Narasimha Chapters</th>
+    <th>Full Stack / MERN Topics</th>
+    <th>Focus</th>
+    <th>Practice / Project</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Heap + Priority Queue</td>
+    <td>Ch 7</td>
+    <td>React Router & State Management</td>
+    <td>Min/Max heap, priority queue applications</td>
+    <td>CB heap challenges, small React SPA</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>Graphs: Basics</td>
+    <td>Ch 9</td>
+    <td>Express + MongoDB Integration</td>
+    <td>Graph representation, DFS, BFS</td>
+    <td>CB graph challenges 1–8, backend API connection</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>Graphs: Advanced</td>
+    <td>Ch 9</td>
+    <td>React + Express Integration (Fetch API)</td>
+    <td>Shortest path, MST, topological sort</td>
+    <td>CB graph challenges 9–16, small MERN app</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>HashMap & Hashing</td>
+    <td>Ch 14</td>
+    <td>MERN Mini Project 1 (Todo App)</td>
+    <td>Hash tables, collisions, chaining</td>
+    <td>CB hashing challenges, Todo App</td>
+    <td><input type="checkbox"></td>
+  </tr>
 </table>
 
 <!-- Month 5 -->
-<h2>Month 5: DP + Greedy + Divide & Conquer</h2>
+<h2>Month 5: DP + Greedy + Divide & Conquer + Advanced MERN</h2>
 <table>
-  <tr>
-    <th>Week</th>
-    <th>Topics</th>
-    <th>Narasimha Chapters</th>
-    <th>Focus</th>
-    <th>Practice</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>DP Basics</td>
-    <td>Ch 19</td>
-    <td>LCS, Fibonacci, subset sum</td>
-    <td>CB DP challenges 1–8</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>DP Advanced</td>
-    <td>Ch 19</td>
-    <td>Matrix chain, knapsack, DP on strings</td>
-    <td>CB DP challenges 9–23</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>19</td>
-    <td>Greedy Algorithms</td>
-    <td>Ch 17</td>
-    <td>Activity selection, fractional knapsack</td>
-    <td>CB greedy challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>Divide & Conquer</td>
-    <td>Ch 18</td>
-    <td>Merge sort, quicksort, binary search variations</td>
-    <td>CB divide & conquer challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
+  <tr>
+    <th>Week</th>
+    <th>Topics (Java + DSA)</th>
+    <th>Narasimha Chapters</th>
+    <th>Full Stack / MERN Topics</th>
+    <th>Focus</th>
+    <th>Practice / Project</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>DP Basics</td>
+    <td>Ch 19</td>
+    <td>React Hooks: useState, useEffect</td>
+    <td>LCS, Fibonacci, subset sum</td>
+    <td>CB DP challenges 1–8, React interactive components</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>DP Advanced</td>
+    <td>Ch 19</td>
+    <td>React Context + Reducer</td>
+    <td>Matrix chain, knapsack, DP on strings</td>
+    <td>CB DP challenges 9–23, state management project</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>Greedy Algorithms</td>
+    <td>Ch 17</td>
+    <td>MERN Mini Project 2 (Blog App)</td>
+    <td>Activity selection, fractional knapsack</td>
+    <td>CB greedy challenges, Blog App</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>Divide & Conquer</td>
+    <td>Ch 18</td>
+    <td>MERN Project: Deployment (Netlify + Heroku)</td>
+    <td>Merge sort, quicksort, binary search</td>
+    <td>CB divide & conquer challenges, deploy previous apps</td>
+    <td><input type="checkbox"></td>
+  </tr>
 </table>
 
 <!-- Month 6 -->
-<h2>Month 6: Advanced Topics + Revision</h2>
+<h2>Month 6: Advanced Topics + Revision + Full Stack Projects</h2>
 <table>
-  <tr>
-    <th>Week</th>
-    <th>Topics</th>
-    <th>Narasimha Chapters</th>
-    <th>Focus</th>
-    <th>Practice</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <td>21</td>
-    <td>Text Processing & String Algorithms</td>
-    <td>Ch 15</td>
-    <td>KMP, Tries, Suffix trees</td>
-    <td>CB text processing challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>Segment Tree & Bitmasking</td>
-    <td>CB Section 20, 22</td>
-    <td>Range queries, bitmask DP</td>
-    <td>CB challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>23</td>
-    <td>Misc Topics: Game, AVL, Adapters, Collections</td>
-    <td>Ch 6 + CB Sections</td>
-    <td>Collections, Java utilities</td>
-    <td>CB challenges</td>
-    <td><input type="checkbox"></td>
-  </tr>
-  <tr>
-    <td>24</td>
-    <td>Revision & Mock Interview Prep</td>
-    <td>All chapters</td>
-    <td>Revise weak areas, practice interview questions</td>
-    <td>Solve top 50 CB + Narasimha problems</td>
-    <td><input type="checkbox"></td>
-  </tr>
+  <tr>
+    <th>Week</th>
+    <th>Topics (Java + DSA)</th>
+    <th>Narasimha Chapters</th>
+    <th>Full Stack / MERN Topics</th>
+    <th>Focus</th>
+    <th>Practice / Project</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>Text Processing & String Algorithms</td>
+    <td>Ch 15</td>
+    <td>Advanced React + Routing + Auth</td>
+    <td>KMP, Tries, Suffix trees</td>
+    <td>CB text processing challenges, secure login app</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>Segment Tree & Bitmasking</td>
+    <td>CB Section 20, 22</td>
+    <td>MERN Mini Project 3 (E-Commerce App)</td>
+    <td>Range queries, bitmask DP</td>
+    <td>CB challenges, E-Commerce App</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>Misc Topics: Game, AVL, Adapters, Collections</td>
+    <td>Ch 6 + CB Sections</td>
+    <td>MERN Project Integration & Optimization</td>
+    <td>Collections, Java utilities</td>
+    <td>CB challenges, combine mini-projects</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>Revision & Mock Interview Prep</td>
+    <td>All chapters</td>
+    <td>Full Stack Interview Prep</td>
+    <td>Revise weak areas, practice interview questions</td>
+    <td>Solve top 50 CB + Narasimha problems + full project portfolio</td>
+    <td><input type="checkbox"></td>
+  </tr>
 </table>
 
-<script>
-// Save & load checkbox state using localStorage
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+<!-- Month 7: Spring Boot Basics -->
+<h2>Month 7: Spring Boot Basics</h2>
+<table>
+<tr>
+<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
+</tr>
+<tr><td>25</td><td>Spring Boot Setup & Project Structure</td><td>Spring Boot starter projects, Maven, application.properties</td><td>Create basic REST APIs</td><td><input type="checkbox"></td></tr>
+<tr><td>26</td><td>Controllers & Endpoints</td><td>RequestMapping, Get/Post/Put/Delete</td><td>Simple CRUD APIs</td><td><input type="checkbox"></td></tr>
+<tr><td>27</td><td>Service Layer & Repository Layer</td><td>Business logic separation, Spring Data JPA</td><td>CRUD with MySQL/Postgres</td><td><input type="checkbox"></td></tr>
+<tr><td>28</td><td>Spring Security & JWT Auth</td><td>User authentication, roles, tokens</td><td>Secure REST API</td><td><input type="checkbox"></td></tr>
+</table>
 
-checkboxes.forEach((cb, index) => {
-  const saved = localStorage.getItem('week_' + index);
+<!-- Month 8: Advanced Spring Boot -->
+<h2>Month 8: Advanced Spring Boot </h2>
+<table>
+<tr>
+<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
+</tr>
+<tr><td>29</td><td>Exception Handling & Validation</td><td>Global exception handlers, input validation</td><td>Enhance previous API project</td><td><input type="checkbox"></td></tr>
+<tr><td>30</td><td>Unit Testing & Postman</td><td>JUnit, Mockito, API testing</td><td>Write test cases for CRUD APIs</td><td><input type="checkbox"></td></tr>
+<tr><td>31</td><td>Advanced Topics: Caching, Pagination</td><td>Spring Cache, Pageable, Sorting</td><td>Improve API performance</td><td><input type="checkbox"></td></tr>
+<tr><td>32</td><td>Mini Project: Backend Only</td><td>Full CRUD + Auth + DB Integration</td><td>Simple Job Portal / Blog</td><td><input type="checkbox"></td></tr>
+</table>
+
+<!-- Month 9: Frontend Basics & React -->
+<h2>Month 9: Frontend Basics + React</h2>
+<table>
+<tr>
+<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
+</tr>
+<tr><td>33</td><td>HTML, CSS, JS Basics</td><td>DOM, Forms, Events</td><td>Static pages for project</td><td><input type="checkbox"></td></tr>
+<tr><td>34</td><td>React Basics</td><td>Components, Props, State, JSX</td><td>Simple React components</td><td><input type="checkbox"></td></tr>
+<tr><td>35</td><td>Advanced React</td><td>Hooks, Context API, Router</td><td>Integrate with backend APIs</td><td><input type="checkbox"></td></tr>
+<tr><td>36</td><td>Project Integration</td><td>React + Spring Boot APIs</td><td>Display & interact with backend data</td><td><input type="checkbox"></td></tr>
+</table>
+
+<!-- Month 10: Full Stack Projects & Deployment -->
+<h2>Month 10: Full Stack Projects + Deployment</h2>
+<table>
+<tr>
+<th>Week</th><th>Topics</th><th>Focus</th><th>Practice / Projects</th><th>Done</th>
+</tr>
+<tr><td>37</td><td>Full Stack Project Development</td><td>End-to-end CRUD, Auth, Frontend routing</td><td>Job Portal / E-commerce / Blog</td><td><input type="checkbox"></td></tr>
+<tr><td>38</td><td>Testing & Debugging</td><td>API & UI testing, fix bugs</td><td>Project completion</td><td><input type="checkbox"></td></tr>
+<tr><td>39</td><td>Deployment Basics</td><td>Heroku, AWS, Environment setup</td><td>Deploy project online</td><td><input type="checkbox"></td></tr>
+<tr><td>40</td><td>Portfolio & Interview Prep</td><td>Showcase projects, GitHub, Resume</td><td>Revise DSA + Projects</td><td><input type="checkbox"></td></tr>
+</table>
+</table>
+</div>
+</section>
+
+<!-- Repeat similar sections for Month 2 – Month 10 -->
+<!-- For brevity, you can copy the structure above and update IDs like month2_week1, month2_week2... etc -->
+
+<script>
+// Save & load checkboxes using unique IDs
+document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+  const saved = localStorage.getItem(cb.id);
   if (saved === 'true') cb.checked = true;
 
   cb.addEventListener('change', () => {
-    localStorage.setItem('week_' + index, cb.checked);
+    localStorage.setItem(cb.id, cb.checked);
   });
 });
+
+// Mark all done / Reset buttons per month
+function markAllDone(monthId) {
+  document.querySelectorAll(`#${monthId} input[type="checkbox"]`).forEach(cb => {
+    cb.checked = true;
+    localStorage.setItem(cb.id, true);
+  });
+}
+
+function resetMonth(monthId) {
+  document.querySelectorAll(`#${monthId} input[type="checkbox"]`).forEach(cb => {
+    cb.checked = false;
+    localStorage.setItem(cb.id, false);
+  });
+}
 </script>
 
+</div>
 </body>
 </html>
